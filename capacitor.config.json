@@ -1,0 +1,13 @@
+{
+  "appId": "com.kingdomofchoices.game",
+  "appName": "پادشاه انتخاب‌ها",
+  "webDir": "www",
+  "backgroundColor": "#0d0a06",
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#0d0a06"
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

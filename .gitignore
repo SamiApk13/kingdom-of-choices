@@ -1,0 +1,11 @@
+node_modules/
+android/
+ios/
+dist/
+.gradle/
+.env
+*.local
+.DS_Store
+.idea/
+*.log
+coverage/

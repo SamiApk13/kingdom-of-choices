@@ -1,0 +1,81 @@
+/**
+ * css/theme.css
+ * ------------------------------------------------------------
+ * بند 38: تم لوکس، سلطنتی، تیره. تمام رنگ‌ها از متغیرهای تم می‌آیند
+ * تا بعداً بدون تغییر کد قابل شخصی‌سازی باشند.
+ */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../assets/fonts/vazirmatn.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../assets/fonts/vazirmatn-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* رنگ‌های اصلی */
+  --bg-0: #0d0a06;
+  --bg-1: #15100a;
+  --bg-2: #1e1710;
+  --bg-3: #2a2014;
+  --gold: #c9a227;
+  --gold-soft: #e8cf7a;
+  --gold-dim: #8a7228;
+  --red: #a83232;
+  --red-bright: #d84a4a;
+  --green: #3f9e5f;
+  --blue: #4f8fd0;
+  --text-0: #f3e9d2;
+  --text-1: #cbbd9d;
+  --text-2: #8f8468;
+  --danger: #e05a4e;
+  --success: #63c17f;
+  --warn: #e0a94a;
+
+  /* ابعاد */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --nav-height: 62px;
+  --topbar-height: 52px;
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  --border: 1px solid rgba(201, 162, 39, 0.22);
+  --border-strong: 1px solid rgba(201, 162, 39, 0.45);
+
+  /* فونت (بند 38: فونت از تم می‌آید نه کد) */
+  --font: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  height: 100%;
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.7;
+  overscroll-behavior: none;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(201, 162, 39, 0.08), transparent 60%),
+    var(--bg-0);
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+body.reduce-motion * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

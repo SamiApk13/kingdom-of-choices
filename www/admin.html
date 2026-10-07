@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>پنل مدیریت — پادشاه انتخاب‌ها</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <style>
+    body { padding: 16px; }
+    .admin-wrap { max-width: 760px; margin: 0 auto; }
+    textarea.json { width: 100%; min-height: 220px; background: var(--bg-2); color: var(--text-1); border: var(--border); border-radius: 8px; padding: 10px; font-size: 12px; font-family: monospace; direction: ltr; }
+    .admin-note { font-size: 12px; color: var(--text-2); }
+  </style>
+</head>
+<body>
+  <div class="admin-wrap">
+    <div class="page-head">
+      <h2>پنل مدیریت بازی</h2>
+      <a class="btn btn-sm" href="index.html">بازگشت به بازی</a>
+    </div>
+    <p class="admin-note mb-8">
+      این پنل روی همین دستگاه اعمال می‌شود (ذخیره در حافظه محلی). در نسخه آنلاین، همین ابزار به بک‌اند متصل می‌شود
+      و تغییرات برای همه بازیکنان منتشر می‌شود (بند ۵۵ سند طراحی).
+    </p>
+    <div id="admin-root"></div>
+  </div>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

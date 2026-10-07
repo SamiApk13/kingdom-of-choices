@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تست‌های موتور بازی</title>
+  <style>
+    body { font-family: Tahoma, sans-serif; background: #0d0a06; color: #f3e9d2; padding: 20px; }
+    .ok { color: #63c17f; } .bad { color: #e05a4e; }
+    pre { white-space: pre-wrap; font-size: 12px; color: #cbbd9d; }
+  </style>
+</head>
+<body>
+  <h2>تست‌های واحد موتور بازی</h2>
+  <div id="out">در حال اجرا…</div>
+  <script type="module">
+    import { getResults } from './engine.tests.mjs';
+    const out = document.getElementById('out');
+    let html = '';
+    let failed = 0;
+    for (const r of getResults()) {
+      if (r.ok) html += `<div class="ok">✅ ${r.name}</div>`;
+      else { failed++; html += `<div class="bad">❌ ${r.name}</div><pre>${r.error}</pre>`; }
+    }
+    html += `<h3 class="${failed ? 'bad' : 'ok'}">${getResults().length - failed}/${getResults().length} تست موفق</h3>`;
+    out.innerHTML = html;
+  </script>
+</body>
+</html>

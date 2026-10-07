@@ -1,0 +1,24 @@
+{
+  "name": "kingdom-of-choices",
+  "displayName": "پادشاه انتخاب‌ها",
+  "version": "1.0.0",
+  "description": "Kingdom of Choices - a data-driven Persian kingdom management / decision game (PWA + Android via Capacitor)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server www -p 8080 -c-1 --cors",
+    "test": "node tests/run.mjs",
+    "test:ui": "node tests/ui.smoke.mjs",
+    "cap:sync": "cap sync android",
+    "cap:android": "cap add android && cap sync android",
+    "apk:local": "npm run cap:android && cd android && ./gradlew assembleDebug"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "jsdom": "^29.1.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  }
+}
